@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rent a Car</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= nav_bar  brand: "Rent a Car Easier", responsive: true, brand_link: root_url do %>
+    <%= menu_group do %>
+        <%= drop_down "New" do %>
+            <%= menu_item "Category", "categories#new" %>
+        <% end %>
+        <%= menu_divider %>
+    <% end %>
+    
+<% end %>
+
+<div class="container">
+    <%= yield %>
+</div>
+
+</body>
+</html>
