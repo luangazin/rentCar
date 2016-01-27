@@ -1,19 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Category Detailed</div>
+    <div class="panel-body">
+      <p>
+        <strong>Name:</strong>
+        <%= @category.name %>
+      </p>
+      
+      <p>
+        <strong>Description:</strong>
+        <%= @category.description %>
+      </p>
+      
+      <p>
+        <strong>Enable:</strong>
+        <%= @category.enable %>
+      </p>
+      
+      <%= link_to 'Edit', edit_category_path(@category), class: "btn btn-default" %>
+      <%= link_to 'Back', categories_path, class: "btn btn-default" %>
+    </div>
+</div>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
 
-<p>
-  <strong>Enable:</strong>
-  <%= @category.enable %>
-</p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
